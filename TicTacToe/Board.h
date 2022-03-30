@@ -8,20 +8,19 @@ class Board
 {
 private :
 	char* papan;
-	int boardsize;
+	int size;
 public :
 	Board();
-	Board(int boardsize);
+	Board(int size);
 	~Board();
 
 	char board2d(int x, int y);
 	int getSize();
-	void resetBoard();
 	void makeBoard();
+	void resetBoard();
 
 	void placesymbol(int coord, char symbol);
-	bool isFilled();
+	bool isFilled(int coord);
 	bool isWin();
-
 
 };
